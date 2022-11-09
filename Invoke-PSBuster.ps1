@@ -177,5 +177,5 @@
 # big list will throw out of memory exception
 $directoryArray = [System.IO.File]::ReadAllLines([System.IO.Path]::Combine($PSScriptRoot, 'directory-list-2.3-big.txt'))
 $baseUri = [uri]::new('https://example.com/')
-$result = Invoke-Parallel -DirectoryArray $directoryArray -BaseUri $baseUri
+$result = Invoke-PSBuster -DirectoryArray $directoryArray -BaseUri $baseUri
 $result | Where-Object {$_.Status -eq [System.Net.HttpStatusCode]::OK}
