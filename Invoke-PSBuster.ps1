@@ -17,7 +17,7 @@
         [System.Collections.Concurrent.ConcurrentBag[PSCustomObject]]
     .EXAMPLE
         $result = Invoke-Parallel -Array (1..10) -Arg2 "asd" -Timeout 120000
-#>
+    #>
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
